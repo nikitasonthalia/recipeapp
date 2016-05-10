@@ -1,0 +1,41 @@
+<%= form_for(@receipe) do |f| %>
+  <% if @receipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@receipe.errors.count, "error") %> prohibited this receipe from being saved:</h2>
+
+      <ul>
+      <% @receipe.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :preperation_time %><br>
+    <%= f.text_field :preperation_time %>
+  </div>
+  <div class="field">
+    <%= f.label :servings %><br>
+    <%= f.number_field :servings %>
+  </div>
+  <div class="field">
+    <%= f.label :direction %><br>
+    <%= f.text_area :direction %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

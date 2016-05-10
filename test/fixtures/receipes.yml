@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  country: MyString
+  preperation_time: MyString
+  servings: 1
+  direction: MyText
+
+two:
+  title: MyString
+  country: MyString
+  preperation_time: MyString
+  servings: 1
+  direction: MyText

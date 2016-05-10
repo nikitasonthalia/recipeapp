@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><center>
+  <%= @receipe.title %> </center></strong></center>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @receipe.country %>
+</p>
+
+<p>
+  <strong>Preperation time:</strong>
+  <%= @receipe.preperation_time %>
+</p>
+
+<p>
+  <strong>Servings:</strong>
+  <%= @receipe.servings %>
+</p>
+
+<p>
+  <strong>Direction:</strong>
+  <%= @receipe.direction %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <%= image_tag  "#{@receipe.id}.jpg" %>
+  
+</p>
+
+<%= link_to 'Edit', edit_receipe_path(@receipe) %> |
+<%= link_to 'Back', receipes_path %>
